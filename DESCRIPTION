@@ -1,0 +1,23 @@
+Package: rbcc
+Type: Package
+Title: Risk-based Control Chart
+Version: 1.0.0
+Author: c(
+    person("Aamir Sagir", "Attila I. Katona", "Zsolt T. Kosztyan*",email="kzst@gtk.uni-pannon.hu", role = c("aut", "cre"))
+    )
+Maintainer: Zsolt T. Kosztyan <kzst@gtk.uni-pannon.hu>
+Description: Risk-based Multivariate Control Chart
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/kzst/rbmcc
+Depends: 
+    R (>= 3.10)
+Imports: 
+    qcc,
+    ggplot2,
+    reshape2,
+    PearsonDS,
+    gsl,
+    pracma,
+    stats
