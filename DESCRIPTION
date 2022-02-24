@@ -1,7 +1,7 @@
 Package: rbcc
 Type: Package
 Title: Risk-based Control Chart
-Version: 1.0.0
+Version: 0.0.3
 Author: c(
     person("Aamir Sagir", "Attila I. Katona", "Zsolt T. Kosztyan*",email="kzst@gtk.uni-pannon.hu", role = c("aut", "cre"))
     )
