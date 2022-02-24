@@ -59,7 +59,6 @@ e-mail: kzst@gtk.uni-pannon.hu
 \code{\link{rbmcc}}
 }
 \examples{
-library (qcc)
 
 # Data generation for matrix X
 mu_X <- c(0,1,2)               # vector of means.
@@ -82,6 +81,8 @@ UC <- data_gen(obs,mu_UC, va_UC, sk_UC, ku_UC)     # example for generation of m
 # with default vector of decision costs
 C <- c(1,1,1,1)                # vector of decision costs
 H <- rbmcc(X, UC, C)           # for subgroups of size 1
+plot.rbmcc(H)                  # plot RBMCC
+
 H_opt <- rbmcc_opt(X, UC, C)   # optimal risk-based multivariate control chart
 
 # with vector of proportional decision costs
@@ -96,19 +97,7 @@ H_opt <- rbmcc_opt(X, UC, C, 3)   # optimal risk-based multivariate control char
 
 # Plot of Hotelling's T2 and optimal risk based multivariate control charts
 
-
-library(ggplot2)
-library(reshape2)
-
-UCL=H_opt$baselimit
-UCLopt=H_opt$limit
-df <- data.frame(Groups = c(1:length(H_opt$real)), y1= H_opt$real, y2=H_opt$Observed, y3= UCL, y4=UCLopt)
-big_data <- melt(df, id = "Groups")
-ggplot(big_data, aes(x = Groups,  y = value, color = variable)) +
-      geom_line()+ scale_color_manual(labels = c("real","observed","UCL", "UCLopt"), values=c("black", "green1", "blue", "red"))+
-      labs (x= "Groups", y= "Group_Statistic")+ theme_bw()+ theme(legend.title = element_blank()) +
-      ggtitle(" Multivariate Control chart for Hotelling's and risk-based Statistics")
-
+plot.rbmcc(H_opt)
 
 }
 \keyword{multivariate}

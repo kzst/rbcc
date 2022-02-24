@@ -6,7 +6,7 @@ rbmcc <- function(X, UC, C, n=1 , confidence_level=0.99, K=0)
       call. = FALSE
     )
   }
-  
+
   if(missing(n)) {
     n <- 1
   }
@@ -17,42 +17,42 @@ rbmcc <- function(X, UC, C, n=1 , confidence_level=0.99, K=0)
     K <- 0
   }
 
-  
-  
+
+
   n_int <- n*(floor(nrow(X)/n))
   X <- X[1:n_int,]
   UC <- UC[1:n_int,]
-  
-  m <- nrow(X)                              # Number of subgroups 
+
+  m <- nrow(X)                              # Number of subgroups
   p <- ncol(X)
-  
-  Dx <- c()                               #  Data matrix with subgroups 
-  
+
+  Dx <- c()                               #  Data matrix with subgroups
+
   for (i in 1: ncol(X)){
-    
+
     x <- matrix(X[,i],ncol=n)
     Dx[[i]]<-x
-    
+
   }
-  
+
   qx <- qcc::mqcc(Dx, type = "T2", confidence.level = confidence_level, plot = FALSE)
   T2x <- qx$statistics          # real values of T2 statistic
   T2UCL <- qx$limits[2]         # UCL of T2 chart
-  Y <- X+UC                     # measurement error data matrix 
-  
+  Y <- X+UC                     # measurement error data matrix
+
   Dy <- c()                   # measurement error data matrix with subgroups
-  
+
   for (i in 1: ncol(Y)){
-    
+
     y <- matrix(Y[,i],ncol=n)
     Dy[[i]]<-y
-    
+
   }
-  
-  qy <- qcc::mqcc(Dy, type = "T2", confidence.level= confidence_level, plot = FALSE) # calculation of risk based T2 
-  T2y <- qy$statistics                      #  observed T2 with measurement errors 
+
+  qy <- qcc::mqcc(Dy, type = "T2", confidence.level= confidence_level, plot = FALSE) # calculation of risk based T2
+  T2y <- qy$statistics                      #  observed T2 with measurement errors
   T2UCL_UC <- T2UCL
-  
+
   # -----------------calculation of costs and define cases (boolean)-----------
   P1 <- (T2x<T2UCL & T2y<T2UCL_UC-K)*1 # correct acceptance
   P2 <- (T2x>T2UCL & T2y<T2UCL_UC-K)*1 # type 2 error
@@ -64,5 +64,6 @@ rbmcc <- function(X, UC, C, n=1 , confidence_level=0.99, K=0)
   C3 <- sum(P3)     # total cost related to decision 3 (c10)
   C4 <- sum(P4)     # total cost related to decision 4 (c00)
  output <- list(cost0=C0, cost1= C1, cost2= C2, cost3= C3, cost4= C4, baselimit=T2UCL, limit= T2UCL_UC-K, real=T2x, Observed= T2y, cchartx=qx, ccharty=qy)
-  return(output)
+ class(output) <- "rbmcc"
+ return(output)
 }

@@ -1,28 +1,28 @@
-\name{data_gen}
-\alias{data_gen}
+\name{plot.rbmcc}
+\alias{plot.rbmcc}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Data Generator for Risk-based Multivariate Control Charts
+Plot function for Risk-based Multivariate Control Chart
 }
 \description{
-data_gen function simulate the data set from a specified distribution used in the risk based multivariate control chart.
+Plot function for Risk-based Multivariate Control Chart
 }
 \usage{
-data_gen(obs, mu, va, sk, ku)
+plot.rbmcc(H)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-\item{obs}{The total number of observations of a process. (numeric value).}
-\item{mu}{The means of p characteristics. (numeric vector).}
-\item{va}{The variances of p characteristics. (numeric vector).}
-\item{sk}{The skewness of distribution of p characteristics. (numeric vector).}
-\item{ku}{The kurtosis of distribution of p characteristics. (numeric vector).}
+  \item{H}{ rbmcc list}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-Return the data matrix and the measurement error matrix used in the rmbcc function.
+%%  ~Describe the value returned
+%%  If it is a LIST, use
+%%  \item{comp1 }{Description of 'comp1'}
+%%  \item{comp2 }{Description of 'comp2'}
+%% ...
 }
 \references{
 Kosztyán, Z. T., and Katona, A. I. (2016). Risk-based multivariate control chart. Expert Systems with Applications, 62, 250-262.
@@ -33,17 +33,17 @@ Aamir Saghir, Attila I. Katona, Zsolt T. Kosztyan*
 e-mail: kzst@gtk.uni-pannon.hu
 }
 \note{
-%%  ~~further notes~~
+
 }
 
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-\code{\link{rbmcc}}
+\code{\link{data_gen}},
+\code{\link{rbmcc}},
 \code{\link{rbmcc_opt}}
 }
 \examples{
-
 # Data generation for matrix X
 mu_X <- c(0,1,2)               # vector of means.
 va_X  <- c(1,2, 0.5)           # vector of standard deviation.
@@ -66,25 +66,6 @@ UC <- data_gen(obs,mu_UC, va_UC, sk_UC, ku_UC)     # example for generation of m
 C <- c(1,1,1,1)                # vector of decision costs
 H <- rbmcc(X, UC, C)           # for subgroups of size 1
 plot.rbmcc(H)                  # plot RBMCC
-
-H_opt <- rbmcc_opt(X, UC, C)   # optimal risk-based multivariate control chart
-
-# with vector of proportional decision costs
-C <- c(1, 60, 5, 5)        # vector of decision costs
-H <- rbmcc(X, UC, C)           # for subgroups of size 1
-H_opt <- rbmcc_opt(X, UC, C)   # optimal risk-based multivariate control chart
-
-# with vector of proportional decision costs and sugbroup size 3
-C <- c(1, 60, 5, 5)           # vector of decision costs
-H <- rbmcc(X, UC, C, 3)           # for subgroups of size 3
-H_opt <- rbmcc_opt(X, UC, C, 3)   # optimal risk-based multivariate control chart
-
-# Plot of Hotelling's T2 and optimal risk based multivariate control charts
-
-plot.rbmcc(H_opt)
-
-
 }
 \keyword{multivariate}
 \concept{control chart}
-
