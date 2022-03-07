@@ -25,3 +25,9 @@ Imports:
     gsl,
     pracma,
     stats
+Collate:
+    'data_gen.R'
+    'plot.rbmcc.R'
+    'rbmcc.R'
+    'rbmcc_opt.R'
+    'summary.rbmcc.R'

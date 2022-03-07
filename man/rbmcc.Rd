@@ -24,10 +24,10 @@ rbmcc(X, UC, C, n=1 , confidence_level=0.99, K=0)
 }
 \value{
 
-\item{cost0}{Total cost of process}
+\item{cost0}{Total cost of the process}
 \item{cost1}{Total cost of correct acceptance}
-\item{cost2}{Total cost of decision error type 2}
-\item{cost3}{Total cost of decision error type 1}
+\item{cost2}{Total cost of decision error type 1}
+\item{cost3}{Total cost of decision error type 2}
 \item{cost4}{Total cost of correct reject}
 \item{baselimit}{UCL of T^2 chart}
 \item{limit}{UCL of optimized risk based multivariate control chart}
@@ -83,12 +83,12 @@ plot.rbmcc(H)                  # plot RBMCC
 H_opt <- rbmcc_opt(X, UC, C)   # optimal risk-based multivariate control chart
 
 # with vector of proportional decision costs
-C <- c(1, 60, 5, 5)        # vector of decision costs
+C <- c(1, 5, 60, 5)        # vector of decision costs
 H <- rbmcc(X, UC, C)           # for subgroups of size 1
 H_opt <- rbmcc_opt(X, UC, C)   # optimal risk-based multivariate control chart
 
 # with vector of proportional decision costs and sugbroup size 3
-C <- c(1, 60, 5, 5)           # vector of decision costs
+C <- c(1, 5, 60, 5)           # vector of decision costs
 H <- rbmcc(X, UC, C, 3)           # for subgroups of size 3
 H_opt <- rbmcc_opt(X, UC, C, 3)   # optimal risk-based multivariate control chart
 

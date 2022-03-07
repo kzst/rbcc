@@ -8,11 +8,11 @@ Plot function for Risk-based Multivariate Control Chart
 Plot function for Risk-based Multivariate Control Chart
 }
 \usage{
-plot.rbmcc(H)
+plot.rbmcc(object)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{H}{ rbmcc list}
+  \item{object}{an object of class 'rbqcc'.}
 }
 \details{
 %%  ~~ If necessary, more details than the description above ~~
@@ -42,6 +42,7 @@ e-mail: kzst@gtk.uni-pannon.hu
 \code{\link{data_gen}},
 \code{\link{rbmcc}},
 \code{\link{rbmcc_opt}}
+\code{\link{summary.rbmcc}}
 }
 \examples{
 # Data generation for matrix X
