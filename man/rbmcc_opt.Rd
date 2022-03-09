@@ -1,6 +1,6 @@
 \name{rbmcc_opt}
 \alias{rbmcc_opt}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Optimized Risk-based Multivariate Control Chart
 }
@@ -8,9 +8,9 @@ Optimized Risk-based Multivariate Control Chart
 Calculate Optimized Risk-based Multivariate Control Chart
 }
 \usage{
-rbmcc(X, UC, C, n=1, confidence_level=0.99, K_init=0,LKL=-5,UKL=5)
+rbmcc_opt(X, UC, C, n=1, confidence_level=0.99, K_init=0,LKL=-5,UKL=5)
 }
-%- maybe also 'usage' for other objects documented here.
+
 \arguments{
   \item{X}{matrix of variables (numeric matrix). Either can be simulated using data_gen or defined by using available data set.}
   \item{UC}{matrix of measuerement error (numeric matrix).}
@@ -21,9 +21,7 @@ rbmcc(X, UC, C, n=1, confidence_level=0.99, K_init=0,LKL=-5,UKL=5)
   \item{LKL}{Lower limit of K parameter (default value is -5)}
   \item{UKL}{Upper limit of K parameter (default value is -5)}
 }
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
+
 \value{
 \item{cost0}{Total cost of process}
 \item{cost1}{Total cost of correct acceptance}
@@ -48,18 +46,12 @@ Aamir Saghir, Attila I. Katona, Zsolt T. Kosztyan*
 
 e-mail: kzst@gtk.uni-pannon.hu
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
 \code{\link{data_gen}}
 \code{\link{rbmcc}}
 }
 \examples{
-
 # Data generation for matrix X
 mu_X <- c(0,1,2)               # vector of means.
 va_X  <- c(1,2, 0.5)           # vector of standard deviation.
@@ -76,7 +68,8 @@ va_UC <- c(1,2, 0.5)           # vector of standard deviation of measurement err
 sk_UC <- c(0,0,0)              # Vector of skewness of measurement errors.
 ku_UC <- c(3,3,3)              # Vector of kurtosis of measurement errors.
 
-UC <- data_gen(obs,mu_UC, va_UC, sk_UC, ku_UC)     # example for generation of measurement error matrix
+# example for generation of measurement error matrix
+UC <- data_gen(obs,mu_UC, va_UC, sk_UC, ku_UC)
 
 # with default vector of decision costs
 C <- c(1,1,1,1)                # vector of decision costs
@@ -86,12 +79,12 @@ plot.rbmcc(H)                  # plot RBMCC
 H_opt <- rbmcc_opt(X, UC, C)   # optimal risk-based multivariate control chart
 
 # with vector of proportional decision costs
-C <- c(1, 60, 5, 5)        # vector of decision costs
+C <- c(1, 5, 60, 5)        # vector of decision costs
 H <- rbmcc(X, UC, C)           # for subgroups of size 1
 H_opt <- rbmcc_opt(X, UC, C)   # optimal risk-based multivariate control chart
 
 # with vector of proportional decision costs and sugbroup size 3
-C <- c(1, 60, 5, 5)           # vector of decision costs
+C <- c(1, 5, 60, 5)           # vector of decision costs
 H <- rbmcc(X, UC, C, 3)           # for subgroups of size 3
 H_opt <- rbmcc_opt(X, UC, C, 3)   # optimal risk-based multivariate control chart
 

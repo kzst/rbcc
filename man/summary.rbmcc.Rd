@@ -8,24 +8,16 @@ Summary of Risk-based Multivariate Control Chart
 Print summary of Risk-based Multivariate Control Chart
 }
 \usage{
-summary.rbmcc(object,digits =  getOption("digits"), ...))
+\method{summary}{rbmcc}(object, digits = getOption("digits"), ...)
 }
+
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{object}{an object of class 'rbmcc'.}
   \item{digits}{the number of significant digits to use when \code{add.stats = TRUE}.}
+  \item{...}{additional arguments affecting the summary produced.}
+}
 
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
-}
-\value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
-}
 \references{
 Kosztyán, Z. T., and Katona, A. I. (2016). Risk-based multivariate control chart. Expert Systems with Applications, 62, 250-262.
 }
@@ -34,11 +26,6 @@ Aamir Saghir, Attila I. Katona, Zsolt T. Kosztyan*
 
 e-mail: kzst@gtk.uni-pannon.hu
 }
-\note{
-%%  ~~further notes~~
-}
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
 \code{\link{data_gen}},
@@ -63,15 +50,29 @@ va_UC <- c(1,2, 0.5)           # vector of standard deviation of measurement err
 sk_UC <- c(0,0,0)              # Vector of skewness of measurement errors.
 ku_UC <- c(3,3,3)              # Vector of kurtosis of measurement errors.
 
-UC <- data_gen(obs,mu_UC, va_UC, sk_UC, ku_UC)     # example for generation of measurement error matrix
+# example for generation of measurement error matrix
+UC <- data_gen(obs,mu_UC, va_UC, sk_UC, ku_UC)
 
 # with default vector of decision costs
 C <- c(1,1,1,1)                # vector of decision costs
 H <- rbmcc(X, UC, C)           # for subgroups of size 1
-summary.rbmcc(H)                  # summary of object class RBMCC
+summary.rbmcc(H)                  # print summary of RBMCC
 
-H_opt <- rbmcc_opt(X, UC, C)      # for optimal RBMCC
-summary.rbmcc(H)                  # summary of object class RBMCC
+H_opt <- rbmcc_opt(X, UC, C)   # optimal risk-based multivariate control chart
+
+# with vector of proportional decision costs
+C <- c(1, 5, 60, 5)        # vector of decision costs
+H <- rbmcc(X, UC, C)           # for subgroups of size 1
+H_opt <- rbmcc_opt(X, UC, C)   # optimal risk-based multivariate control chart
+
+# with vector of proportional decision costs and sugbroup size 3
+C <- c(1, 5, 60, 5)           # vector of decision costs
+H <- rbmcc(X, UC, C, 3)           # for subgroups of size 3
+H_opt <- rbmcc_opt(X, UC, C, 3)   # optimal risk-based multivariate control chart
+
+# Plot of Hotelling's T2 and optimal risk based multivariate control charts
+
+summary.rbmcc(H_opt)
 }
 \keyword{multivariate}
 \concept{control chart}

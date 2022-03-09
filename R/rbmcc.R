@@ -1,3 +1,15 @@
+#-----------------------------------------------------------------------------#
+#                                                                             #
+#  RISK-BASED MULTIVARIATE CONTROL CHARTS                                     #
+#                                                                             #
+#  Written by: Aamir Saghir, Attila I. Katona, Zsolt T. Kosztyan              #
+#              Department of Quantitative Methods                             #
+#              University of Pannonia, Hungary                                #
+#              kzst@gtk.uni-pannon.hu                                         #
+#                                                                             #
+# Last modified: March 2022                                                   #
+#-----------------------------------------------------------------------------#
+
 rbmcc <- function(X, UC, C, n=1 , confidence_level=0.99, K=0)
 {
   if (!requireNamespace("qcc", quietly = TRUE)) {
@@ -14,7 +26,7 @@ rbmcc <- function(X, UC, C, n=1 , confidence_level=0.99, K=0)
   if (missing(C))
     {stop("Cost vector argument is missing")}
   if(!(length(C)==4))
-    stop("Cost should be a vector of length 4!")
+    {stop("Cost should be a vector of length 4!")}
   if(missing(n))
     {n <- 1}
   if(missing(confidence_level))
@@ -67,7 +79,7 @@ rbmcc <- function(X, UC, C, n=1 , confidence_level=0.99, K=0)
   C2 <- sum(P2)*C[2]    # total cost related to decision 2 (c10)
   C3 <- sum(P3)*C[3]    # total cost related to decision 3 (c01)
   C4 <- sum(P4)*C[4]    # total cost related to decision 4 (c00)
- output <- list(cost0=C0, cost1= C1, cost2= C2, cost3= C3, cost4= C4, baselimit=T2UCL, limit= T2UCL_UC-K, real=T2x, Observed= T2y, cchartx=qx, ccharty=qy)
+ output <- list(cost0=C0, cost1= C1, cost2= C2, cost3= C3, cost4= C4, baselimit=T2UCL, limit= T2UCL_UC-K, real=T2x, Observed= T2y)
  class(output) <- "rbmcc"
  return(output)
 }

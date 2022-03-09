@@ -1,1 +1,6 @@
-exportPattern("^[[:alpha:]]+")
+
+export(data_gen, plot.rbmcc, summary.rbmcc, rbmcc, rbmcc_opt)
+S3method("summary", "rbmcc")
+S3method("plot", "rbmcc")
+
+exportPattern("^[^\\.]")

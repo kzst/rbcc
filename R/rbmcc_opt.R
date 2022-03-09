@@ -1,3 +1,15 @@
+#-----------------------------------------------------------------------------#
+#                                                                             #
+#  RISK-BASED MULTIVARIATE CONTROL CHARTS                                     #
+#                                                                             #
+#  Written by: Aamir Saghir, Attila I. Katona, Zsolt T. Kosztyan              #
+#              Department of Quantitative Methods                             #
+#              University of Pannonia, Hungary                                #
+#              kzst@gtk.uni-pannon.hu                                         #
+#                                                                             #
+# Last modified: March 2022                                                   #
+#-----------------------------------------------------------------------------#
+
 rbmcc_opt <- function (X, UC, C, n=1, confidence_level=0.99, K_init=0,LKL=-5,UKL=5){
 
   if (!requireNamespace("pracma", quietly = TRUE)) {

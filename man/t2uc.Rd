@@ -4,9 +4,11 @@
 \title{
 Sample data for Risk-based Multivariate Control Chart
 }
+
 \description{
-%%  ~~ A concise (1-5 lines) description of the dataset. ~~
+The optimization is conducted assuming all data points are measured in the laboratory. This study verifies the applicability of risk-based approaches to real industrial problems and compares the results obtained by simulations and experiments, providing information about the achievable cost reduction opportunities granted by simulations.
 }
+
 \usage{data("t2uc")}
 \format{
   A data frame with 0 observations on the following 2 variables.
@@ -19,14 +21,9 @@ Sample data for Risk-based Multivariate Control Chart
     \item{\code{diameter_error}}{a numeric vector}
   }
 }
-\details{
-%%  ~~ If necessary, more details than the __description__ above ~~
-}
-\source{
-%%  ~~ reference to a publication or URL from which the data were obtained ~~
-}
+
 \references{
-%%  ~~ possibly secondary sources and usages ~~
+Katona, A. I. (2021). Validation of risk-based quality control techniques: a case study from the automotive industry. Journal of Applied Statistics, 1-20.
 }
 \examples{
 data(t2uc)
