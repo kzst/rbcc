@@ -12,7 +12,7 @@ Plot function for Risk-based Multivariate Control Chart
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
-  \item{x}{an object of class 'rbqcc'.}
+  \item{x}{an object of class 'rbmcc'.}
   \item{...}{other graphical parameters.}
 }
 
@@ -26,12 +26,8 @@ e-mail: kzst@gtk.uni-pannon.hu
 }
 
 
-\seealso{
-\code{\link{data_gen}},
-\code{\link{rbmcc}},
-\code{\link{rbmcc_opt}}
-\code{\link{summary.rbmcc}}
-}
+\seealso{\code{\link{rbmcc}}, \code{\link{rbmcc_opt}}, \code{\link{data_gen}}, \code{\link{summary.rbmcc}}.}
+
 \examples{
 # Data generation for matrix X
 mu_X <- c(0,1,2)               # vector of means.

@@ -31,10 +31,8 @@ Aamir Saghir, Attila I. Katona, Zsolt T. Kosztyan*
 e-mail: kzst@gtk.uni-pannon.hu
 }
 
-\seealso{
-\code{\link{rbmcc}}
-\code{\link{rbmcc_opt}}
-}
+\seealso{\code{\link{rbmcc}}, \code{\link{rbmcc_opt}}, \code{\link{plot.rbmcc}}, \code{\link{summary.rbmcc}}.}
+
 \examples{
 # Data generation for matrix X
 mu_X <- c(0,1,2)               # vector of means.
