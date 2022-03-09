@@ -11,8 +11,6 @@ Maintainer: Zsolt T. Kosztyan <kzst@gtk.uni-pannon.hu>
 Description: Risk-based Multivariate Control Charts for continuous, attribute and count data.
 License: GPL (>= 2)
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
 LazyData: true
 URL: https://github.com/kzst/rbmcc
 Depends: 
@@ -31,3 +29,4 @@ Collate:
     'rbmcc.R'
     'rbmcc_opt.R'
     'summary.rbmcc.R'
+RoxygenNote: 7.1.1

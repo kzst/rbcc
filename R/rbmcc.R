@@ -10,6 +10,7 @@
 # Last modified: March 2022                                                   #
 #-----------------------------------------------------------------------------#
 
+#' @export
 rbmcc <- function(X, UC, C, n=1 , confidence_level=0.99, K=0)
 {
   if (!requireNamespace("qcc", quietly = TRUE)) {

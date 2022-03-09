@@ -10,6 +10,7 @@
 # Last modified: March 2022                                                   #
 #-----------------------------------------------------------------------------#
 
+#' @export
 rbmcc_opt <- function (X, UC, C, n=1, confidence_level=0.99, K_init=0,LKL=-5,UKL=5){
 
   if (!requireNamespace("pracma", quietly = TRUE)) {

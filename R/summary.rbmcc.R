@@ -10,7 +10,7 @@
 # Last modified: March 2022                                                   #
 #-----------------------------------------------------------------------------#
 
-
+#' @export
 summary.rbmcc <- function(object, digits =  getOption("digits"), ...) {
   if (!requireNamespace("qcc", quietly = TRUE)) {
     stop(

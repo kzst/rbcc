@@ -10,6 +10,7 @@
 # Last modified: March 2022                                                   #
 #-----------------------------------------------------------------------------#
 
+#' @export
 data_gen <- function(obs, mu, va, sk, ku)
   {
   if (!requireNamespace("PearsonDS", quietly = TRUE)) {

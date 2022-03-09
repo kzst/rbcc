@@ -10,7 +10,7 @@
 # Last modified: March 2022                                                   #
 #-----------------------------------------------------------------------------#
 
-
+#' @export
 plot.rbmcc <- function(x,...){
   if (class(x)=="rbmcc"){
     if (!requireNamespace("ggplot2", quietly = TRUE)) {
