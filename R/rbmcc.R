@@ -34,17 +34,17 @@ rbmcc <- function(X, UC, C, n=1 , confidence_level=0.99, K=0)
     {confidence_level <- 0.99 }
   if(missing(K))
   {K <- 0}
-  n_int <- n*(floor(nrow(X)/n))
+  n_int <- n*(floor(length(X)/n))
 
-  X <- X[1:n_int,]
-  UC <- UC[1:n_int,]
+  X <- X[1:n_int]
+  UC <- UC[1:n_int]
 
-  m <- nrow(X)                              # Number of subgroups
-  p <- ncol(X)
+  m <- length(X)                              # Number of subgroups
+  p <- 1
 
   Dx <- c()                               #  Data matrix with subgroups
 
-  for (i in 1: ncol(X)){
+  for (i in 1: n){
 
     x <- matrix(X[,i],ncol=n)
     Dx[[i]]<-x

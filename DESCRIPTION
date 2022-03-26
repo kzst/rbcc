@@ -12,7 +12,7 @@ Description: Risk-based Multivariate Control Charts for continuous, attribute an
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
-URL: https://github.com/kzst/rbmcc
+URL: https://github.com/kzst/rbcc
 Depends: 
     R (>= 3.10)
 Imports: 
