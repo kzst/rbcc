@@ -12,7 +12,7 @@
 
 #' @export
 plot.rbmcc <- function(x,...){
-  if (class(x)=="rbmcc"){
+  if ("rbmcc" %in% class(x)){
     if (!requireNamespace("ggplot2", quietly = TRUE)) {
       stop(
         "Package \"ggplot2\" must be installed to use this function.",
