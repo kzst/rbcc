@@ -1,35 +1,38 @@
 #-----------------------------------------------------------------------------#
 #                                                                             #
-#              RISK-BASED CONTROL CHARTS                                      #
+#            RISK-BASED STATISTICAL CONTROL CHARTS                            #
 #                                                                             #
 #  Written by: Aamir Saghir, Attila I. Katona, Zsolt T. Kosztyan              #
 #              Department of Quantitative Methods                             #
 #              University of Pannonia, Hungary                                #
 #              kzst@gtk.uni-pannon.hu                                         #
 #                                                                             #
-# Last modified: March 2022                                                   #
+# Last modified: March 2023                                                   #
 #-----------------------------------------------------------------------------#
 
 #' @export
-data_gen <- function(obs, mu, va, sk, ku)
-  {
-  if (!requireNamespace("PearsonDS", quietly = TRUE)) {
+rbmacc_opt <- function (X, UC, C, n=1, w=2, K_init=0, LKL=-5, UKL=5){
+  if (!requireNamespace("stats", quietly = TRUE)) {
     stop(
-      "Package \"PearsonDS\" must be installed to use this function.",
+      "Package \"stats\" must be installed to use this function.",
       call. = FALSE
     )
   }
-  if (!requireNamespace("gsl", quietly = TRUE)) {
-    stop(
-      "Package \"gsl\" must be installed to use this function.",
-      call. = FALSE
-    )
-  }
-X1 <- numeric()
-for (i in 1 : length (mu)){
-  x <- PearsonDS::rpearson (obs, moments= c(mu[i], va[i], sk[i], ku[i])) # samples can be drawn from any parent population (normal as well non-normal)
-  X1 <- cbind(X1,x)
+
+  if(missing(n))
+  {n <- 1}
+  if(missing(w))
+  {w <- 2 }
+    if(missing(K_init))
+  {K_init <- c(0,0)}
+
+  fcn=function(K_init) rbmacc(X, UC, C, n, w, K_init)[[1]]
+  Q= pracma::fminbnd(fcn, LKL, UKL)
+  Kopt<-Q[[1]]
+  H_opt<-rbmacc(X, UC, C, n, w, K=Kopt)
+  H_opt$par<-Kopt
+  class(H_opt)<-"rbcc"
+  return(H_opt)
 }
 
-return (X1)
-}
+

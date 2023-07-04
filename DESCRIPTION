@@ -1,32 +1,41 @@
 Package: rbcc
 Type: Package
 Title: Risk-based Control Chart
-Version: 0.0.6
+Version: 0.1.0
 Author: c(
     person("Aamir", "Sagir", role = "aut"),
     person("Attila","Imre","Katona", role = "aut"),
     person("Zsolt","Tibor","Kosztyan",email="kzst@gtk.uni-pannon.hu", role = c("aut", "cre"))
     )
 Maintainer: Zsolt T. Kosztyan <kzst@gtk.uni-pannon.hu>
-Description: Risk-based Multivariate Control Charts for continuous, attribute and count data.
+Description: Risk-based Control Charts for univariate and multi-variate processes.
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/kzst/rbcc
 Depends: 
-    R (>= 3.10)
+    R (>= 4.00)
 Imports: 
     qcc,
     ggplot2,
     reshape2,
     PearsonDS,
     gsl,
-    pracma,
-    stats
+    pracma
 Collate:
     'data_gen.R'
     'plot.rbmcc.R'
+    'plot.rbcc.R'
     'rbmcc.R'
     'rbmcc_opt.R'
+    'rbewmacc.R'
+    'rbewmacc_opt.R'
+    'rbmacc.R'
+    'rbmacc_opt.R'
+    'rbcc.R'
+    'rbcc_opt.R'
+    'rbcusumcc.R'
+    'rbcusumcc_opt.R'
+    'summary.rbcc.R'
     'summary.rbmcc.R'
-RoxygenNote: 7.1.1
+RoxygenNote: 7.2.3

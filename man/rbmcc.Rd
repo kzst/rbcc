@@ -43,10 +43,7 @@ Aamir Saghir, Attila I. Katona, Zsolt T. Kosztyan*
 
 e-mail: kzst@gtk.uni-pannon.hu
 }
-
-
-
-\seealso{\code{\link{rbmcc_opt}}, \code{\link{data_gen}}, \code{\link{plot.rbmcc}}, \code{\link{summary.rbmcc}}.}
+\seealso{\code{\link{data_gen}}, \code{\link{rbcc}}, \code{\link{rbcc_opt}}, \code{\link{rbewmacc}}, \code{\link{rbewmacc_opt}}, \code{\link{rbmacc}},  \code{\link{rbmacc_opt}}, \code{\link{rbmcc_opt}}, \code{\link{plot.rbcc}}, \code{\link{summary.rbcc}}.}
 
 \examples{
 # Data generation for matrix X

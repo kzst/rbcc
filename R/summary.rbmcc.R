@@ -18,7 +18,7 @@ summary.rbmcc <- function(object, digits =  getOption("digits"), ...) {
       call. = FALSE
     )
   }
-  if (class(object)=="rbmcc"){
+  if ("rbmcc" %in% class(object)){
     real <- object$real
     Observed <- object$Observed
     cost0 <- object$cost0 # calculation of total cost during the process
