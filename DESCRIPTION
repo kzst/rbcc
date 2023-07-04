@@ -20,11 +20,9 @@ Imports:
     ggplot2,
     reshape2,
     PearsonDS,
-    gsl,
     pracma
 Collate:
     'data_gen.R'
-    'plot.rbmcc.R'
     'plot.rbcc.R'
     'rbmcc.R'
     'rbmcc_opt.R'
@@ -37,5 +35,4 @@ Collate:
     'rbcusumcc.R'
     'rbcusumcc_opt.R'
     'summary.rbcc.R'
-    'summary.rbmcc.R'
 RoxygenNote: 7.2.3

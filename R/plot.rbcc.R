@@ -12,7 +12,7 @@
 
 #' @export
 plot.rbcc <- function(x,...){
-  if (class(x)=="rbcc"){
+  if ("rbcc" %in% class(x)){
     if (!requireNamespace("ggplot2", quietly = TRUE)) {
       stop(
         "Package \"ggplot2\" must be installed to use this function.",
@@ -43,7 +43,7 @@ plot.rbcc <- function(x,...){
 }
 #' @export
 plot.rbcusumcc <- function(x,...){
-  if (class(x)=="rbcusumcc"){
+  if ("rbcusumcc" %in% class(x)){
     if (!requireNamespace("ggplot2", quietly = TRUE)) {
       stop(
         "Package \"ggplot2\" must be installed to use this function.",
@@ -74,7 +74,7 @@ plot.rbcusumcc <- function(x,...){
 }
 #' @export
 plot.rbmcc <- function(x,...){
-  if (class(x)=="rbmcc"){
+  if ("rbmcc" %in% class(x)){
     if (!requireNamespace("ggplot2", quietly = TRUE)) {
       stop(
         "Package \"ggplot2\" must be installed to use this function.",
