@@ -67,11 +67,13 @@ UC <- data_gen(obs,mu_UC, va_UC, sk_UC, ku_UC)
 
 C <- c(1,1,1,1)                           # Define a vector of decision costs.
 H <- rbmacc(X, UC, C, w=2, n=1)           # for subgroups of size 1
+summary(H)                                # summarize the reults
 plot(H)                                   # plot RBMACC
 
 # with vector of proportional decision costs
 C <- c(1, 5, 60, 5)                       # vector of decision costs
 H <- rbmacc(X, UC, C, w=2, n=2)           # for subgroups of size 1
+summary(H)                                # summarize the reults
 plot(H)                                   # plot RBMACC
 
 }

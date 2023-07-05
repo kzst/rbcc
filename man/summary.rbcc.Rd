@@ -81,6 +81,7 @@ UC <- data_gen(obs,mu_UC, va_UC, sk_UC, ku_UC)
 # with default vector of decision costs
 C <- c(1,1,1,1)                # vector of decision costs
 H <- rbmcc(X, UC, C)           # for subgroups of size 1
+summary(H)                     # summarize the results
 plot(H)                        # plot RBMCC
 
 H_opt <- rbmcc_opt(X, UC, C)# optimal risk-based multivariate control chart
@@ -94,6 +95,7 @@ H_opt <- rbmcc_opt(X, UC, C)   # optimal risk-based multivariate control chart
 C <- c(1, 5, 60, 5)           # vector of decision costs
 H <- rbmcc(X, UC, C, 3)        # for subgroups of size 3
 H_opt <- rbmcc_opt(X, UC, C, 3)# optimal risk-based multivariate control chart
+summary(H_opt)                  # summarize the results
 
 # Plot of Hotelling's T2 and optimal risk based multivariate control charts
 

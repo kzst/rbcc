@@ -84,6 +84,8 @@ H <- rbcusumcc(X, UC, C, n, T=5, se.shift=1, K=0)
 H_opt <- rbcusumcc_opt(X, UC, C, n, T=5, se.shift=1, K_init= 0, LKL=-5, UKL=5)
 # optimal risk-based CUSUM control chart
 
+summary(H_opt)                # summarize the reults
+
 # Plot of traditional and optimal risk based cusum control charts
 plot(H_opt)
 }

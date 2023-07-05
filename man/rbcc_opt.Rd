@@ -74,6 +74,7 @@ UC <- data_gen(obs,mu_UC, va_UC, sk_UC, ku_UC)
 # Construction of risk-based Xbar chart with default vector of decision costs
 C <- c(1,1,1,1)                                 # vector of decision costs
 H <- rbcc(X, UC, C, n=3, type="xbar")           # for subgroups of size 3
+summary(H)                                      # summarize the results
 plot(H)                                         # plot RBCC
 
 # optimal risk-based xbar control chart
@@ -103,6 +104,7 @@ UC <- data_gen(obs,mu_UC, va_UC, sk_UC, ku_UC)
 # with default vector of decision costs
 C <- c(1,1,1,1)                # vector of decision costs
 H <- rbmcc(X, UC, C)           # for subgroups of size 1
+summary(H)                     # summarize the results
 plot(H)                        # plot RBMCC
 
 H_opt <- rbmcc_opt(X, UC, C) # optimal risk-based multivariate control chart

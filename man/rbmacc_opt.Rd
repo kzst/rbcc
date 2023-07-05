@@ -69,12 +69,14 @@ H <- rbmacc(X, UC, C, w=2, n=1)           # for subgroups of size 1
 
 # fit optimal risk-based MA control chart
 H_opt <- rbmacc_opt(X, UC, C, w=2, n=1)
+summary(H_opt)                              # summarize the reults
 plot(H_opt)                                 # plot RBMACC
 # with vector of proportional decision costs
 C <- c(1, 5, 60, 5)                      # vector of decision costs
 H <- rbmacc(X, UC, C, w=2, n=3)          # for subgroups of size 3
 # fit optimal risk-based MA control chart
 H_opt <- rbmacc_opt(X, UC, C, w=2, n=3)
+summary(H_opt)                              # summarize the reults
 plot(H_opt)                                 # plot RBMACC
 }
 \keyword{MA}

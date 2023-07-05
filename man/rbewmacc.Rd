@@ -72,6 +72,7 @@ plot(H)                                   # plot RBCC
 # with vector of proportional decision costs
 C <- c(1, 5, 60, 5)               # vector of decision costs
 H <- rbewmacc(X, UC, C)           # traditional risk-based EWMA control chat
+summary(H)                        # summarize the results
 plot(H)                           # plot RBCC
 
 
