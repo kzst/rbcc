@@ -1,14 +1,14 @@
 Package: rbcc
 Type: Package
-Title: Risk-based Control Chart
+Title: Risk-Based Control Chart
 Version: 0.1.0
-Author: c(
-    person("Aamir", "Sagir", role = "aut"),
-    person("Attila","Imre","Katona", role = "aut"),
-    person("Zsolt","Tibor","Kosztyan",email="kzst@gtk.uni-pannon.hu", role = c("aut", "cre"))
+Authors@R: c(
+    person(given="Aamir",family= "Sagir", role = "aut"),
+    person(given=c("Attila","Imre"),family="Katona", role = "aut"),
+    person(given=c("Zsolt","Tibor"),family="Kosztyan",email="kosztyan.zsolt@gtk.uni-pannon.hu", role = c("aut", "cre"))
     )
 Maintainer: Zsolt T. Kosztyan <kzst@gtk.uni-pannon.hu>
-Description: Risk-based Control Charts for univariate and multi-variate processes.
+Description: Risk-Based Control Charts for univariate and multi-variate processes.
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true

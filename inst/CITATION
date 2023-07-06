@@ -3,9 +3,9 @@ bibentry(
     bibtype      = "article",
     title        = "rbcc: an R package for Risk-based Control Charts",
     author       = c(
-    person("Aamir", "Sagir", role = "aut"),
-    person("Attila","Imre","Katona", role = "aut"),
-    person("Zsolt","Tibor","Kosztyan",email="kzst@gtk.uni-pannon.hu", role = c("aut", "cre"))
+    person(given="Aamir",family= "Sagir", role = "aut"),
+    person(given=c("Attila","Imre"),family="Katona", role = "aut"),
+    person(given=c("Zsolt","Tibor"),family="Kosztyan",email="kosztyan.zsolt@gtk.uni-pannon.hu", role = c("aut", "cre"))
     ),
     journal      = "IEEE Access",
     year         = 2023,

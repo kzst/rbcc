@@ -131,5 +131,6 @@ summary(R) # summarize the results
 plot(R)    # plot the result
 
 }
-\keyword{univariate, multivariate}
+\keyword{univariate}
+\keyword{multivariate}
 \concept{control chart}
