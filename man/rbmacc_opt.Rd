@@ -21,18 +21,16 @@ Calculate Optimized Risk-based Univariate MA Control Chart
 }
 
 \value{
-\item{cost0}{Total cost of process}
-\item{cost1}{Total cost of correct acceptance}
-\item{cost2}{Total cost of decision error type 2}
-\item{cost3}{Total cost of decision error type 1}
-\item{cost4}{Total cost of correct reject}
-\item{baselimit}{UCL of a MA chart}
-\item{limit}{UCL of optimized risk based MA control chart}
-\item{real}{Real values of plotting statistic}
-\item{Observed}{Observed plotting statistic with measurement errors}
-\item{UC}{Matrix of measuerement error (numeric matrix)}
-\item{X}{Matrix of variables (numeric matrix). Either can be simulated using data_gen or defined by using available data set.}
-\item{Kopt}{Optimal K paramater of risk-based MA control chart}
+\item{cost0}{Total cost of a monioting process}
+\item{cost1}{Total cost of correct acceptance related to a process monitoring}
+\item{cost2}{Total cost of decision error type 1 related to a process monitoring}
+\item{cost3}{Total cost of decision error type 2 related to a process monitoring}
+\item{cost4}{Total cost of correct reject related to a process monitoring}
+\item{baselimit}{UCL of a MA chart for a given data}
+\item{limit}{UCL of optimized risk based MA control chart for a given data}
+\item{real}{Real values of plotting statistic for a given data}
+\item{Observed}{Observed plotting statistic with measurement errors for a given data}
+\item{Kopt}{Optimal K paramater of risk-based MA control chart for a given data}
 }
 \references{
 Kosztyán, Z. T., and Katona, A. I. (2016). Risk-based multivariate control chart. Expert Systems with Applications, 62, 250-262.

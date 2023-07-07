@@ -22,7 +22,7 @@ data_gen(obs, mu, va, sk, ku)
 
 \value{
 Return the data vector/matrix and the measurement error vector/matrix used
-in the rbcc/rbmcc functions.
+in the risk-based control charts functions.
 }
 \references{
 Kosztyán, Z. T., and Katona, A. I. (2016). Risk-based multivariate control chart.

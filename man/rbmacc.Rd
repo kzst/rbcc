@@ -21,17 +21,19 @@ rbmacc (X, UC, C, n=1, w=2, K=0)
 
 \value{
 
-\item{cost0}{Total cost of the process}
-\item{cost1}{Total cost of correct acceptance}
-\item{cost2}{Total cost of decision error type 1}
-\item{cost3}{Total cost of decision error type 2}
-\item{cost4}{Total cost of correct reject}
+\item{cost0}{Total cost of a monitoring  process}
+\item{cost1}{Total cost of correct acceptance related to a process monitoring}
+\item{cost2}{Total cost of decision error type 1 related to a process monitoring}
+\item{cost3}{Total cost of decision error type 2 related to a process monitoring}
+\item{cost4}{Total cost of correct reject related to a process monitoring}
 \item{LCLx}{Lower control limit of MA chart for a given data}
 \item{UCLx}{Upper control limit of MA control chart for a given data}
-\item{LCLy}{Lower control limit of MA chart for for a given data with measurement uncertainity}
-\item{UCLy}{Upper control limit of MA control chart for a given data with measurement uncertainity}
-\item{real}{Real values of MA statistic}
-\item{Observed}{Observed values of MA statistic with measurement errors}
+\item{LCLy}{Lower control limit of MA chart for for a given data with measurement
+uncertainity}
+\item{UCLy}{Upper control limit of MA control chart for a given data with
+measurement uncertainity}
+\item{real}{Real values of MA statistic for a given data}
+\item{Observed}{Observed values of MA statistic with measurement errors for a given data}
 }
 \references{
 Kosztyán, Z. T., and Katona, A. I. (2016). Risk-based multivariate control chart. Expert Systems with Applications, 62, 250-262.

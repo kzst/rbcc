@@ -27,18 +27,20 @@ data_gen or defined by using available data set.}
 }
 
 \value{
-\item{cost0}{Total cost of process}
-\item{cost1}{Total cost of correct acceptance}
-\item{cost2}{Total cost of decision error type 2}
-\item{cost3}{Total cost of decision error type 1}
-\item{cost4}{Total cost of correct reject}
-\item{LCLx}{Lower Control Limit of a Shewhart univariate 'type' chart}
-\item{UCLx}{Upper Control Limit of a Shewhart univariate 'type' chart}
-\item{LCLy}{Lower Control Limit of a Optimal Risk-based univariate 'type' chart}
-\item{UCLy}{Upper Control Limit of a Optimal Risk-based univariate 'type' chart}
-\item{real}{Real values of plotting statistic}
-\item{Observed}{Observed plotting statistic with measurement errors}
-\item{par}{Optimal K parameter of risk-based univariate 'type' chart}
+\item{cost0}{Total cost of a monitoring process}
+\item{cost1}{Total cost of correct acceptance related to a process monitoring}
+\item{cost2}{Total cost of decision error type 2 related to a process monitoring}
+\item{cost3}{Total cost of decision error type 1 related to a process monitoring}
+\item{cost4}{Total cost of correct reject related to a process monitoring}
+\item{LCLx}{Lower Control Limit of a Shewhart univariate 'type' chart for a given data}
+\item{UCLx}{Upper Control Limit of a Shewhart univariate 'type' chart for a given data}
+\item{LCLy}{Lower Control Limit of an Optimal Risk-based univariate 'type' chart
+for a given data}
+\item{UCLy}{Upper Control Limit of an Optimal Risk-based univariate 'type' chart
+for a given data}
+\item{real}{Real values of plotting statistic for a given data}
+\item{Observed}{Observed plotting statistic for a given data  with measurement errors}
+\item{par}{Optimal 'K' parameter of risk-based univariate 'type' chart}
 }
 \references{
 Kosztyán, Z. T., and Katona, A. I. (2016). Risk-based multivariate control chart. Expert Systems with Applications, 62, 250-262.

@@ -7,7 +7,7 @@
 Plot function for Risk-based Control Charts
 }
 \description{
-Plot function for Risk-based Univariate (Shewhart, EWMA and MA) or
+Plot function for Risk-based Univariate (Shewhart, EWMA, CUSUM and MA) or
 Multivariate Control Chart
 }
 \usage{

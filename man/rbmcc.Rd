@@ -21,19 +21,15 @@ rbmcc(X, UC, C, n=1 , confidence_level=0.99, K=0)
 
 \value{
 
-\item{cost0}{Total cost of the process}
-\item{cost1}{Total cost of correct acceptance}
-\item{cost2}{Total cost of decision error type 1}
-\item{cost3}{Total cost of decision error type 2}
-\item{cost4}{Total cost of correct reject}
-\item{baselimit}{UCL of T^2 chart}
-\item{limit}{UCL of optimized risk based multivariate control chart}
-\item{real}{Real values of T2 statistic}
-\item{Observed}{Observed T2 with measurement errors}
-\item{cchartx}{Calculation of original T2 (qmcc object)}
-\item{ccharty}{Calculation of risk based T2 (qmcc object)}
-\item{UC}{Matrix of measuerement error (numeric matrix)}
-\item{X}{Matrix of variables (numeric matrix). Either can be simulated using data_gen or defined by using available data set.}
+\item{cost0}{Total cost of a monitoirng process}
+\item{cost1}{Total cost of correct acceptance related to a process monitoring}
+\item{cost2}{Total cost of decision error type 1 related to a process monitoring}
+\item{cost3}{Total cost of decision error type 2 related to a process monitoring}
+\item{cost4}{Total cost of correct reject related to a process monitoring}
+\item{baselimit}{UCL of T^2 chart for a given data}
+\item{limit}{UCL of optimized risk based multivariate control chart for a given data}
+\item{real}{Real values of T2 statistic for a given data}
+\item{Observed}{Observed T2 with measurement errors for a given data}
 }
 \references{
 Kosztyán, Z. T., and Katona, A. I. (2016). Risk-based multivariate control chart. Expert Systems with Applications, 62, 250-262.

@@ -22,17 +22,22 @@ rbcc (X, UC, C, n, type= c("xbar", "R", "S"), confidence_level=0.9973, K=0)
 
 \value{
 
-\item{cost0}{Total cost of the process}
-\item{cost1}{Total cost of correct acceptance}
-\item{cost2}{Total cost of decision error type 1}
-\item{cost3}{Total cost of decision error type 2}
-\item{cost4}{Total cost of correct reject}
-\item{LCLx}{Lower control limit of type chart for a given data}
-\item{UCLx}{Upper control limit of type control chart for a given data}
-\item{LCLy}{Lower control limit of type chart for for a given data with measurement uncertainity}
-\item{UCLy}{Upper control limit of type control chart for a given data with measurement uncertainity}
-\item{real}{Real values of chart type statistic}
-\item{Observed}{Observed values of chart type statistic with measurement errors}
+\item{cost0}{Total cost of a monitoring process}
+\item{cost1}{Total cost of correct acceptance related to a process monitoring}
+\item{cost2}{Total cost of decision error type 1 related to a process monitoring}
+\item{cost3}{Total cost of decision error type 2 related to a process monitoring}
+\item{cost4}{Total cost of correct reject related to a process monitoring}
+\item{LCLx}{Lower control limit of a Shewhart univariate 'type' chart for a
+given data}
+\item{UCLx}{Upper control limit of a Shewhart univariate 'type' chart for
+a given data}
+\item{LCLy}{Lower control limit of a Shewhart univariate 'type' chart for a given
+data with measurement uncertainity}
+\item{UCLy}{Upper control limit of a Shewhart univariate 'type' chart
+for a given data with measurement uncertainity}
+\item{real}{Real values of a Shewhart univariate 'type' chart statistic}
+\item{Observed}{Observed values of a Shewhart univariate 'type' chart
+with measurement errors}
 }
 \references{
 Kosztyán, Z. T., and Katona, A. I. (2016). Risk-based multivariate control chart.

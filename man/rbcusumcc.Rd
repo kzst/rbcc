@@ -22,21 +22,23 @@ rbcusumcc(X, UC, C, n, T=5, se.shift=1, K=0)
 
 \value{
 
-\item{cost0}{Total cost of the process}
-\item{cost1}{Total cost of correct acceptance}
-\item{cost2}{Total cost of decision error type 1}
-\item{cost3}{Total cost of decision error type 2}
-\item{cost4}{Total cost of correct reject}
+\item{cost0}{Total cost of a monitoing process}
+\item{cost1}{Total cost of correct acceptance related to a process monitoring}
+\item{cost2}{Total cost of decision error type 1 related to a process monitoring}
+\item{cost3}{Total cost of decision error type 2 related to a process monitoring}
+\item{cost4}{Total cost of correct reject related to a process monitoring}
 \item{LCLx}{Lower decision bound of CUSUM chart for a given data}
 \item{UCLx}{Upper decision bound of CUSUM control chart for a given data}
 \item{LCLy}{Lower decision bound of CUSUM chart for a given data with measurement uncertainity}
 \item{UCLy}{Upper decision bound of CUSUM chart for a given data with measurement uncertainity}
 \item{cusumx}{Real values of CUSUM statistic}
-\item{cusumy}{Observed values of CUSUM statistic with measurement errors}
-\item{reall}{Below target real values of CUSUM statistic}
-\item{realu}{Above target real values of CUSUM statistic}
-\item{obsl}{Below target observed values of CUSUM statistic with measurement errors}
-\item{obsu}{Below target observed values of CUSUM statistic with measurement errors}
+\item{cusumy}{Observed values of CUSUM statistic with measurement errors for a given data}
+\item{reall}{Below target real values of CUSUM statistic for a given data}
+\item{realu}{Above target real values of CUSUM statistic for a given data}
+\item{obsl}{Below target observed values of CUSUM statistic with measurement
+errors for a given data}
+\item{obsu}{Below target observed values of CUSUM statistic with measurement
+errors for a given data}
 }
 \references{
 Kosztyán, Z. T., and Katona, A. I. (2016). Risk-based multivariate control chart. Expert Systems with Applications, 62, 250-262.
