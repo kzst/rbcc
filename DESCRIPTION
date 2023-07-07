@@ -8,7 +8,7 @@ Authors@R: c(
     person(given=c("Zsolt","Tibor"),family="Kosztyan",email="kosztyan.zsolt@gtk.uni-pannon.hu", role = c("aut", "cre"))
     )
 Maintainer: Zsolt Tibor Kosztyan <kosztyan.zsolt@gtk.uni-pannon.hu>
-Description: Risk-Based Control Charts for univariate and multivariate processes. Univariate control charts, such as risk-based version of X-bar, MA, EWMA, CUSUM charts. Risk-based version of multivariate T2 control chart. Plot and summary functions. Kosztyan et. al. (2016) <doi:10.1016/j.eswa.2016.06.019>.
+Description: Risk-Based Control Charts for univariate and multivariate processes. Univariate control charts, such as the risk-based version of X-bar, MA, EWMA, and CUSUM charts. The risk-based version of the multivariate T2 control chart. Plot and summary functions. Kosztyan et. al. (2016) <doi:10.1016/j.eswa.2016.06.019>.
 License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true
