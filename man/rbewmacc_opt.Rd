@@ -5,7 +5,8 @@
 Optimized Risk-based EWMA Control Charts
 }
 \description{
-Calculate Optimized Risk-based Univariate EWMA Control Chart
+Calculate Optimized Risk-based Univariate exponentially weighted moving average
+Control Chart
 }
 \usage{
 rbewmacc_opt(X, UC, C, n=1, lambada=0.20, nsigmas=3, K_init= 0, LKL=-5, UKL=5)

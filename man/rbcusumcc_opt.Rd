@@ -5,7 +5,7 @@
 Optimized Risk-based CUSUM Control Charts
 }
 \description{
-Calculate Optimized Risk-based Univariate CUSUM Control Chart
+Calculate Optimized Risk-based Univariate cumulative sum (CUSUM) Control Chart
 }
 \usage{
 rbcusumcc_opt(X, UC, C, n, T=5, se.shift=1, K_init= 0, LKL=-5, UKL=5)

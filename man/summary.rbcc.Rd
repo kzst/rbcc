@@ -7,7 +7,9 @@
 Summary of Risk-based Control Charts
 }
 \description{
-Print summary of Risk-based Univariate (Shewhart, EWMA, CUSUM and MA) or Multivariate Control Chart
+Print summary of Risk-based Univariate (shewhart, exponentially weighted
+moving average(EWMA), moving average (MA) and cumulative sum (CUSUM) or
+Multivariate Control Chart
 }
 \usage{
 \method{summary}{rbcc}(object, digits = getOption("digits"), ...)

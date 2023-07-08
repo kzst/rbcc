@@ -7,7 +7,8 @@
 Plot function for Risk-based Control Charts
 }
 \description{
-Plot function for Risk-based Univariate (Shewhart, EWMA, CUSUM and MA) or
+Plot function for Risk-based Univariate (shewhart, exponentially weighted
+moving average(EWMA), moving average (MA) and cumulative sum (CUSUM) or
 Multivariate Control Chart
 }
 \usage{
@@ -20,7 +21,7 @@ Multivariate Control Chart
   \item{x}{an object of class 'rbcc', 'rbcusumcc' or 'rbmcc'.}
   \item{...}{other graphical parameters.}
 }
-
+\value{No return value, called for side effects}
 \references{
 Kosztyán, Z. T., and Katona, A. I. (2016). Risk-based multivariate control chart.
 Expert Systems with Applications, 62, 250-262.
