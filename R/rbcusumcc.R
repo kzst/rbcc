@@ -28,6 +28,8 @@ rbcusumcc <- function(X, UC, C, n=1,T=5, se.shift=1,  K=5)
   {se.shift <- 1 }
   if(missing(n))
   {n <- 1 }
+  X <- stats:: na.omit(X)
+  UC<- stats:: na.omit(UC)
   n_int <- n*(floor(length(X)/n))
   X <- X[1:n_int]
   UC <- UC[1:n_int]
@@ -72,7 +74,6 @@ rbcusumcc <- function(X, UC, C, n=1,T=5, se.shift=1,  K=5)
   obsl <- cusum.neg1              # Decreased shift values of cusum statistics
   
   # -----------------calculation of costs and define cases (boolean)-----------
-  
   P1 <-  ((T1 < reall & realu < T2) & (T3< obsl & obsu<T4))*1  # correct acceptance 
   P2 <-  ((T1 < reall & realu < T2) & ( T4<obsu | obsl<T3))*1 # type I error
   P3 <-  ((T2 < realu | reall < T1) & ( T3< obsl & obsu<T4))*1  # type II error 
