@@ -1,6 +1,6 @@
 #-----------------------------------------------------------------------------#
 #                                                                             #
-#               RISK-BASED CONTROL CHARTS                                     # 
+#               RISK-BASED CONTROL CHARTS                                     #
 #                                                                             #
 #  Written by: Aamir Saghir, Attila I. Katona, Zsolt T. Kosztyan              #
 #              Department of Quantitative Methods                             #
@@ -10,7 +10,7 @@
 # Last modified: January 2025                                                 #
 #-----------------------------------------------------------------------------#
 #' @export
-summary.rbcusumcc <- function(object, digits =  getOption("digits"), ...) 
+summary.rbcusumcc <- function(object, digits =  getOption("digits"), ...)
 {
   if (methods::is(object,"rbcusumcc")){
     real <- object$cusumx
@@ -26,18 +26,16 @@ summary.rbcusumcc <- function(object, digits =  getOption("digits"), ...)
     if (!is.null(Kopt)){
       results<-list(real = real, Observed = Observed, cost0 = cost0,
                     cost1 = cost1, cost2 = cost2, cost3 = cost3,
-                    cost4 = cost4, UCLx = UCLx,  
+                    cost4 = cost4, UCLx = UCLx,
                     UCLy = UCLy, Kopt = Kopt)
     }else{
       results<-list(real = real, Observed = Observed, cost0 = cost0,
                     cost1 = cost1, cost2 = cost2, cost3 = cost3,
                     cost4 = cost4, UCLx = UCLx, UCLy = UCLy)
     }
-    return(results)
+    return(invisible(results))
     print.rbcusumcc(object)
-  }else{
-    summary(object,...)
   }
 }
-    
+
 

@@ -10,7 +10,7 @@
 # Last modified: January 2025                                                 #
 #-----------------------------------------------------------------------------#
 #' @export
-print.rbmcc <- function(x, digits =  getOption("digits"), ...) 
+print.rbmcc <- function(x, digits =  getOption("digits"), ...)
 {
   if (methods::is(x,"rbmcc")){
     real <- x$real
@@ -39,8 +39,6 @@ print.rbmcc <- function(x, digits =  getOption("digits"), ...)
     print(real, digits = digits, ...)
     cat("\n\nPrint of group statistics of observed values:\n")
     print(Observed, digits = digits, ...)
-  }else{
-    print(x,...)
   }
 }
 

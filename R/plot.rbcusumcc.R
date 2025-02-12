@@ -26,7 +26,5 @@ plot.rbcusumcc <- function(x,...)
       ggplot2::geom_line()+ ggplot2::scale_color_manual(labels = c("real-", "real+","observed-","observed+","LCL","UCL", "LCLopt", "UCLopt"), values=c("black","black", "green1","green1", "blue","blue", "red","red"))+
       ggplot2::labs (x= "Groups", y= "Group_Statistic")+ ggplot2::theme_bw()+ ggplot2::theme(legend.title = ggplot2::element_blank()) +
       ggplot2::ggtitle("CUSUM Chart for traditional and risk-based Statistics")
-  }else{
-    plot(x,...)
   }
 }

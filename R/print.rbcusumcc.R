@@ -41,7 +41,5 @@ print.rbcusumcc <- function(x, digits =  getOption("digits"), ...)
     print(real, digits = digits, ...)
     cat("\n\nPrint of group statistics of observed values:\n")
     print(Observed, digits = digits, ...)
-  }else{
-    print(x,...)
   }
 }

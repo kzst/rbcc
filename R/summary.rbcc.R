@@ -10,7 +10,7 @@
 # Last modified: January 2025                                                 #
 #-----------------------------------------------------------------------------#
 #' @export
-summary.rbcc <- function(object, digits =  getOption("digits"), ...) 
+summary.rbcc <- function(object, digits =  getOption("digits"), ...)
 {
   if (methods::is(object,"rbcc")){
     real <- object$real
@@ -36,9 +36,7 @@ summary.rbcc <- function(object, digits =  getOption("digits"), ...)
                     cost4 = cost4, LCLx = LCLx, UCLx = UCLx,  LCLy = LCLy,
                     UCLy = UCLy)
     }
-    return(results)
+    return(invisible(results))
     print.rbcc(object)
-  }else{
-    summary(object,...)
   }
 }
