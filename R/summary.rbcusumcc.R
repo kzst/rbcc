@@ -33,8 +33,8 @@ summary.rbcusumcc <- function(object, digits =  getOption("digits"), ...)
                     cost1 = cost1, cost2 = cost2, cost3 = cost3,
                     cost4 = cost4, UCLx = UCLx, UCLy = UCLy)
     }
-    return(invisible(results))
     print.rbcusumcc(object)
+    return(invisible(results))
   }
 }
 

@@ -33,7 +33,7 @@ summary.rbmcc <- function(object, digits =  getOption("digits"), ...)
                     cost1 = cost1, cost2 = cost2, cost3 = cost3,
                     cost4 = cost4, UCLT2 = UCLT2, UCLRBT2 = UCLRBT2)
     }
-    return(invisible(results))
     print.rbmcc(object)
+    return(invisible(results))
   }
 }

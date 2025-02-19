@@ -36,7 +36,7 @@ summary.rbcc <- function(object, digits =  getOption("digits"), ...)
                     cost4 = cost4, LCLx = LCLx, UCLx = UCLx,  LCLy = LCLy,
                     UCLy = UCLy)
     }
-    return(invisible(results))
     print.rbcc(object)
+    return(invisible(results))
   }
 }
