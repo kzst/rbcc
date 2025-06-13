@@ -40,8 +40,9 @@ summary.rbcc <- function(object, digits =  getOption("digits"), ...)
                   cost4 = cost4, LCLx = LCLx, UCLx = UCLx,  LCLy = LCLy,
                   UCLy = UCLy)
   }
-  class(results)<-"summary.rbcc"
-  return(results)
+  object<-results
+  class(object)<-"summary.rbcc"
+  object
 }
 
 #' @export
@@ -67,8 +68,9 @@ summary.rbcusumcc <- function(object, digits =  getOption("digits"), ...)
                   cost1 = cost1, cost2 = cost2, cost3 = cost3,
                   cost4 = cost4, UCLx = UCLx, UCLy = UCLy)
   }
-  class(results)<-"summary.rbcusumcc"
-  return(results)
+  object<-results
+  class(object)<-"summary.rbcusumcc"
+  object
 }
 
 
@@ -95,6 +97,7 @@ summary.rbmcc <- function(object, digits =  getOption("digits"), ...)
                   cost1 = cost1, cost2 = cost2, cost3 = cost3,
                   cost4 = cost4, UCLT2 = UCLT2, UCLRBT2 = UCLRBT2)
   }
-  class(results)<-"summary.rbmcc"
-  return(results)
+  object<-results
+  class(object)<-"summary.rbmcc"
+  object
 }
