@@ -1,4 +1,13 @@
-^renv$
-^renv\.lock$
 ^.*\.Rproj$
 ^\.Rproj\.user$
+^\.Rhistory$
+^\.RData$
+^\.Rprofile$
+^\.git$
+^\.github$
+^renv$
+^renv\.lock$
+^cran-comments\.md$
+^CRAN-SUBMISSION$
+^rbcc_[0-9.]+\.tar\.gz$
+^rbcc\.Rcheck$
